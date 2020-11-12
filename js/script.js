@@ -79,10 +79,25 @@ $( document ).ready(function() {
         }
     });
 
-    circleA.animate(1.0);
-    circleB.animate(1.0);
-    circleC.animate(1.0);
-    circleD.animate(1.0);
+    // iniciando loaders quando a usuário chegar no elemento
+    let dataAreaOffset = $('#data-area').offset();
+    // stop serve para a animação não carregar mais que uma vez
+    let stop = 0;
+
+    $(window).scroll(function (e) {
+
+        let scroll = $(window).scrollTop();
+
+        if(scroll > (dataAreaOffset.top - 500) && stop == 0) {
+            circleA.animate(1.0);
+            circleB.animate(1.0);
+            circleC.animate(1.0);
+            circleD.animate(1.0);
+
+            stop = 1;
+        }
+
+    });
 
 });
 
