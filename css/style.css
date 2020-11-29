@@ -215,6 +215,11 @@ header, .navbar{
     height: 100%;
 }
 
+#pattern-img {
+    background-image: url("../img/pattern.png");
+    background-size: cover;
+    height: 100%;
+}
 #pattern-img h4, #pattern-img p {
     color: #FFF;
 }
