@@ -63,18 +63,18 @@ header, .navbar{
 }
 
 #mainSlider .carousel-caption {
-    top: 30%;
+    top: 25%;
 }
 
 #mainSlider .carousel-caption h2 {
-    font-size: 50px;
+    font-size: 35px;
     margin-bottom: 30px;
 }
 
 #mainSlider .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     color: #FFF;
 }
 
