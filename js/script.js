@@ -107,5 +107,36 @@ $( document ).ready(function() {
         $('#apply-area').parallax({imageSrc: 'img/pattern.png'});
     }, 200);
 
+    // Filtro portfólio
+
+    $('.filter-btn').on('click', function() {
+
+        let type = $(this).attr('id');
+        let boxes = $('.project-box');
+        let string_type = type.replace('-btn', ''); //obter a classe de acordo com o descrito no html
+
+        $('.main-btn').removeClass('active');
+        $(this).addClass('active');
+
+        eachBoxes(string_type, boxes);
+
+
+    });
+
+    function eachBoxes(type, boxes) {
+
+        if(type === 'all') {
+            $(boxes).fadeIn();
+        } else {
+            $(boxes).each(function() {
+                if(!$(this).hasClass(type)) {
+                    $(this).fadeOut('slow');
+                } else {
+                    $(this).fadeIn();
+                }
+            });
+        }
+    }
+
 });
 
