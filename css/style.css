@@ -288,6 +288,10 @@ header, .navbar{
     margin-bottom: 40px;
 }
 
+#news-area form{
+    margin-left: -130px;
+}
+
 #email-input {
     border-radius: 0;
     border-top-left-radius: 20px;
@@ -308,7 +312,6 @@ header, .navbar{
     text-transform: uppercase;
     height: 40px;
     padding: 0 30px;
-    margin-left: -130px;
     position: absolute;
     transition: .5s;
 }
