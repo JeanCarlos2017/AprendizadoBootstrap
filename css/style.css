@@ -432,7 +432,7 @@ header, .navbar{
     color: #3EC1D5;
 }
 /* responsive Tablets */
-@media(max-width: 768px) {
+@media(min-width: 426px) and (max-width: 768px) {
     /* geral */
     .container {
         padding: 20px 0;
@@ -508,9 +508,9 @@ header, .navbar{
         font-size: 16px;
     }
 }
+
 /* reponsive mobile */
 @media(max-width: 425px) {
-
     /* slider */
     #mainSlider {
         margin-top: 90px;
