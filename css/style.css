@@ -587,8 +587,11 @@ header, .navbar{
         font-size: 16px;
     }
 
+    #call-area .container{
+        padding: 15px  0 ;
+    }
     #call-area p, #call-area #call-btn {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 0;
     }
 
