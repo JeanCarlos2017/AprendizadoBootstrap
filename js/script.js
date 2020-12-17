@@ -141,39 +141,31 @@ $( document ).ready(function() {
     // scroll para as seções
 
     let navBtn = $('.nav-item');
-
-    let bannerSection = $('#mainSlider');
-    let aboutSection = $('#about-area');
-    let servicesSection = $('#services-area');
-    let teamSection = $('#team-area');
-    let portfolioSection = $('#portfolio-area');
-    let contactSection = $('#contact-area');
-
     let scrollTo = '';
 
     $(navBtn).click(function() {
 
         let btnId = $(this).attr('id');
+        let divId = '';
+        //console.log(btnId);
 
-        if(btnId == 'about-menu') {
-            scrollTo = aboutSection;
-        } else if(btnId == 'services-menu') {
-            scrollTo = servicesSection;
-        } else if(btnId == 'team-menu') {
-            scrollTo = teamSection;
-        } else if(btnId == 'portfolio-menu') {
-            scrollTo = portfolioSection;
-        } else if(btnId == 'contact-menu') {
-            scrollTo = contactSection;
-        } else {
-            scrollTo = bannerSection;
+        // através do id do botão é descoberto a id da seção que o usuário deseja ir
+        if (btnId === 'home-menu'){
+            divId = '#mainSlider';
+        }else {
+            // através do id do botão eu descubro o id da seção que contem o conteúdo desejado
+            divId = '#' + btnId.replace('menu', 'area');
+
         }
+        //redireciona o usuário para a seção
+        scrollTo = $(divId);
+
 
         $([document.documentElement, document.body]).animate({
             scrollTop: $(scrollTo).offset().top - 70
         }, 1500);
 
-});
+    });
 
 });
 
